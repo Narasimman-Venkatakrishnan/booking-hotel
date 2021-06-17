@@ -7,7 +7,6 @@ import java.util.Map;
 public class FileResourcesUtils {
 
     // get a file from the resources folder
-    // works everywhere, IDEA, unit test and JAR file.
     protected InputStream getFileFromResourceAsStream(String fileName) {
 
         // The class loader that loaded the class
