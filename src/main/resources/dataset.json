@@ -1,0 +1,49 @@
+{
+  "176": [
+    {
+      "price": 120,
+      "features": [
+        "breakfast",
+        "refundable"
+      ],
+      "availability": 5
+    }
+  ],
+  "177": [
+    {
+      "price": 120,
+      "features": [
+        "breakfast",
+        "refundable"
+      ],
+      "availability": 1
+    },
+    {
+      "price": 130,
+      "features": [
+        "breakfast",
+        "wifi"
+      ],
+      "availability": 3
+    },
+    {
+      "price": 140,
+      "features": [
+        "wifi",
+        "breakfast",
+        "refundable"
+      ],
+      "availability": 7
+    }
+  ],
+  "178": [
+    {
+      "price": 120,
+      "features": [
+        "breakfast",
+        "refundable"
+      ],
+      "availability": 2
+    }
+  ]
+}
