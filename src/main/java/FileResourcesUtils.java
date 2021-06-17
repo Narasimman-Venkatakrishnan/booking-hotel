@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class FileResourcesUtils {
 
@@ -22,9 +23,9 @@ public class FileResourcesUtils {
 
     }
 
-    protected Map<String, List<Room>> getDataSet() {
+    protected Map<Integer, List<Room>> getDataSet() {
 
-        Map<String, List<Room>> dataset = new HashMap<>();
+        Map<Integer, List<Room>> dataset = new HashMap<>();
 
         // pepare dataset
 
@@ -37,7 +38,7 @@ public class FileResourcesUtils {
         Room room = new Room(120, feaList, 5);
 
         rList.add(room);
-        dataset.put("176", rList);
+        dataset.put(176, rList);
 
         // prepare 177
         List<Room> rList1 = new ArrayList<>();
@@ -61,8 +62,7 @@ public class FileResourcesUtils {
         rList1.add(room1);
         rList1.add(room2);
         rList1.add(room3);
-
-        dataset.put("177", rList1);
+        dataset.put(177, rList1);
 
         // prepare 178
         List<Room> rList2 = new ArrayList<>();
@@ -73,7 +73,7 @@ public class FileResourcesUtils {
         Room room4 = new Room(120, feaList4, 4);
 
         rList2.add(room4);
-        dataset.put("178", rList2);
+        dataset.put(178, rList2);
 
         return dataset;
     }

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -20,7 +22,7 @@ public class app {
 
         FileResourcesUtils fileRead = new FileResourcesUtils();
         ObjectMapper mapper = new ObjectMapper();
-        Map<String, List<Room>> dataset = new HashMap<>();
+        Map<Integer, List<Room>> dataset = new HashMap<>();
         CustomerRequest request = new CustomerRequest();
 
         dataset = fileRead.getDataSet();
@@ -32,7 +34,7 @@ public class app {
 
     }
 
-    private static List<Room> checkAvailability(Map<String, List<Room>> dataset, CustomerRequest request) {
+    private static List<Room> checkAvailability(Map<Integer, List<Room>> dataset, CustomerRequest request) {
 
         List<Room> resultList = new ArrayList<>();
         List<List<Room>> availableRoomsList = new ArrayList<List<Room>>();
@@ -47,7 +49,7 @@ public class app {
 
         for (int i = request.checkin; i < request.checkout; i++) {
             List<Room> availableRooms = new ArrayList<>();
-            List<Room> temp = dataset.get(Integer.toString(i));
+            List<Room> temp = dataset.get(i);
             availableRooms = temp.stream().filter(isRoomsAvailable).filter(isFeaturesAvailable)
                     .collect(Collectors.toList());
             availableRoomsList.add(availableRooms);
